@@ -29,7 +29,6 @@
   background: var(--pojectCardColor);
   padding: 2rem 2.5rem;
   z-index: 99;
-  border: 1px solid tomato;
 }
 .header .logo a {
   color: var(--whiteColor);
@@ -37,16 +36,21 @@
   cursor: pointer;
 }
 
+.activeHeader {
+  background-color: var(--primaryColor);
+  box-shadow: 0 2px 4px rgba(1, 15, 29, 0.904);
+}
+
 @media screen and (max-width: 768px) {
   .navBar {
-    position: absolute;
     background: var(--pojectCardColor);
+    position: absolute;
     height: -moz-max-content;
     height: max-content;
     width: 80%;
     border-radius: 1rem;
     padding: 1rem;
-    top: 6rem;
+    top: -50rem;
     left: 50%;
     transform: translate(-50%);
     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
@@ -87,9 +91,13 @@
     color: var(--bgColor);
   }
   .navBar .navClose {
-    border: 1px solid tomato;
     position: absolute;
-    bottom: -3;
-    left: 47%;
+    bottom: -1.9rem;
+  }
+  .navBar .navClose:hover {
+    color: var(--primaryColor);
+  }
+  .activeNavbar {
+    top: 6rem;
   }
 }/*# sourceMappingURL=navbar.css.map */

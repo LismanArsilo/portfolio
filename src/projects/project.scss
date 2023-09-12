@@ -1,0 +1,115 @@
+:root {
+  --primaryColor: #00eaff;
+  --primaryHover: hsl(185, 92%, 41%);
+  --secondaryColor: rgb(150, 162, 188);
+  --paragraphColor: rgb(127, 127, 175);
+  --bgColor: #031a30;
+  --formColor: rgb(2, 15, 29);
+  --pojectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+  --whiteColor: rgb(255, 255, 255);
+
+  // Font ang Typograph
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.projects {
+  .projectContainer {
+    .generalProject {
+      gap: 2rem;
+      .singleProject {
+        border: 2px solid var(--secondaryColor);
+        display: grid;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        &:hover {
+          border: 2px solid var(--primaryColor);
+          cursor: pointer;
+        }
+        .iconProjects {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0.5rem;
+          margin-bottom: 0.3rem;
+          a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+              color: var(--primaryColor);
+            }
+          }
+        }
+        .imageProject {
+          border-radius: 1rem;
+          padding: 0.5rem 0;
+          object-fit: cover;
+          &:hover {
+            scale: 1.04;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+          }
+        }
+        .projectInformation {
+          padding: 0.3rem;
+          .projectTitle {
+            font-size: var(--h2FontSize);
+            font-weight: 700;
+            padding: 0.5rem 0;
+          }
+          .projectDescTitle {
+            color: var(--textColor);
+            font-weight: 300;
+            word-spacing: 0.3rem;
+          }
+        }
+        .projectTech {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.3rem;
+          .techFramework {
+            margin-right: 1rem;
+            ::after {
+              content: "";
+              height: 100%;
+              border-right: 1px solid var(--primaryColor);
+              margin-left: 0.5rem;
+            }
+            .framework {
+              font-size: 1.2rem;
+              &:hover {
+                cursor: pointer;
+                color: var(--primaryColor);
+                scale: 1.7;
+              }
+            }
+          }
+          .groupTech {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.2rem;
+            .tech {
+              margin: auto;
+              font-size: 0.8rem;
+              &:hover {
+                cursor: pointer;
+                color: var(--primaryColor);
+                scale: 1.4;
+                transition: all 0.3s ease-in;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

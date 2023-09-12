@@ -1,1 +1,89 @@
-/*# sourceMappingURL=skills.css.map */
+:root {
+  --primaryColor: #00eaff;
+  --primaryHover: hsl(185, 92%, 41%);
+  --secondaryColor: rgb(150, 162, 188);
+  --paragraphColor: rgb(127, 127, 175);
+  --bgColor: #031a30;
+  --formColor: rgb(2, 15, 29);
+  --pojectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+  --whiteColor: rgb(255, 255, 255);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.skills .skillsContainer {
+  gap: 2rem 0;
+  padding: 1rem 0;
+}
+.skills .skillsContainer .skillGroup .groupTitle {
+  color: var(--textColor);
+}
+.skills .skillsContainer .skillGroup .groupTitle .subTitle {
+  display: block;
+}
+.skills .skillsContainer .skillGroup .generalSkills {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 0;
+  gap: 1rem;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox {
+  position: relative;
+  height: 70px;
+  width: 50px;
+  background: var(--pojectCardColor);
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--secondaryColor);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox .icon {
+  font-size: 28px;
+  z-index: 50;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox::before {
+  content: "";
+  height: 0;
+  width: 100%;
+  background: var(--bgColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.2s;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox:hover {
+  color: var(--textColor);
+  border: 2px solid var(--primaryColor);
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox:hover .icon {
+  color: var(--primaryColor);
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox:hover::before,
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .iconBox:hover::after {
+  height: 100%;
+}
+.skills .skillsContainer .skillGroup .generalSkills .singleSkill .skillName {
+  padding-top: 0.3rem;
+  align-items: center;
+  font-weight: 600;
+  color: var(--secondaryColor);
+  margin: auto;
+}/*# sourceMappingURL=skills.css.map */

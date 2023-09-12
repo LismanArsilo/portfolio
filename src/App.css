@@ -70,7 +70,7 @@ img {
 }
 
 .icon {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   cursor: pointer;
 }
 
@@ -171,6 +171,7 @@ img {
 .underline span {
   top: 0;
   left: 10px;
+  height: 100%;
   width: 10px;
   position: absolute;
   background: var(--textColor);

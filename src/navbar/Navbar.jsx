@@ -1,17 +1,38 @@
+import { useState } from "react";
 import "./navbar.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
 const Navbar = () => {
+  const [active, setActive] = useState("navBar");
+
+  const showNavbar = () => {
+    setActive("navBar activeNavbar");
+  };
+
+  const removeNavbar = () => {
+    setActive("navBar");
+  };
+
+  // code statement add background color the header
+  const [activeHeader, setActiveHeader] = useState("header");
+  const addBackground = () => {
+    if (window.scrollY >= 10) {
+      setActiveHeader("header activeHeader");
+    } else {
+      setActiveHeader("header");
+    }
+  };
+  window.addEventListener("scroll", addBackground);
   return (
-    <header className="header">
+    <header className={activeHeader}>
       <div className="headLogo">
         <h1 className="logo">
           <a href="#home">La.</a>
         </h1>
       </div>
 
-      <div className="navBar">
+      <div className={active}>
         <ul className="navLists">
           <li className="navItem">
             <a href="#about" className="navLink">
@@ -36,14 +57,13 @@ const Navbar = () => {
           <button className="btn">
             <a href="#">Resume</a>
           </button>
+          <div onClick={() => removeNavbar()} className="navClose">
+            <AiFillCloseCircle className="icon" />
+          </div>
         </ul>
-
-        <div className="navClose">
-          <AiFillCloseCircle className="icon" />
-        </div>
       </div>
 
-      <div className="navToggle">
+      <div onClick={() => showNavbar()} className="navToggle">
         <TbGridDots className="icon" />
       </div>
     </header>

@@ -1,1 +1,104 @@
-/*# sourceMappingURL=home.css.map */
+:root {
+  --primaryColor: #00eaff;
+  --primaryHover: hsl(185, 92%, 41%);
+  --secondaryColor: rgb(150, 162, 188);
+  --paragraphColor: rgb(127, 127, 175);
+  --bgColor: #031a30;
+  --formColor: rgb(2, 15, 29);
+  --pojectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+  --whiteColor: rgb(255, 255, 255);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.home .containerHome {
+  padding: 4rem 1.5rem;
+}
+.home .containerHome .introHome {
+  font-size: var(--h2FontSize);
+  color: var(--primaryColor);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.home .containerHome .titleHome {
+  padding: 0.7rem 0;
+  font-size: var(--h1FontSize);
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--textColor);
+}
+.home .containerHome .titleHome:hover {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.home .containerHome .subTitleHome {
+  display: block;
+  font-size: var(--h2FontSize);
+  font-weight: 600;
+  color: var(--secondaryColor);
+  line-height: 2rem;
+  padding: 0.5rem 0;
+}
+.home .containerHome .paragraphHome {
+  padding: 0.6rem 1rem;
+  color: var(--paragraphColor);
+  padding: 1rem 0;
+  max-width: 600px;
+  font-size: 1.3rem;
+}
+.home .containerHome .lowerSectionHome .btnHome {
+  padding: 0.6rem 1rem;
+  background: var(--primaryColor);
+  color: var(--bgColor);
+  border: none;
+  outline: none;
+}
+.home .containerHome .lowerSectionHome .btnHome:hover {
+  background: var(--primaryHover);
+  cursor: pointer;
+}
+.home .containerHome .lowerSectionHome .btnHome a {
+  align-items: center;
+  font-size: var(--h3FontSize);
+  font-weight: 600;
+  gap: 0.5rem;
+}
+.home .containerHome .lowerSectionHome .scroolHome {
+  padding-top: 1rem;
+  align-items: center;
+}
+.home .containerHome .lowerSectionHome .scroolHome .scroll {
+  font-size: 1rem;
+  color: var(--primaryColor);
+}
+.home .containerHome .lowerSectionHome .scroolHome .icon {
+  font-size: 1.3rem;
+  margin-left: 0.6rem;
+  color: var(--primaryColor);
+  animation: move 0.5s infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateY(5px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}/*# sourceMappingURL=home.css.map */

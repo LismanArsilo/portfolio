@@ -1,1 +1,96 @@
-/*# sourceMappingURL=about.css.map */
+:root {
+  --primaryColor: #00eaff;
+  --primaryHover: hsl(185, 92%, 41%);
+  --secondaryColor: rgb(150, 162, 188);
+  --paragraphColor: rgb(127, 127, 175);
+  --bgColor: #031a30;
+  --formColor: rgb(2, 15, 29);
+  --pojectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+  --whiteColor: rgb(255, 255, 255);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.about .sectionContent .textSection h4 {
+  color: var(--secondaryColor);
+  font-size: 1.1rem;
+  max-width: 100%;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: auto;
+}
+.about .sectionContent .textSection .btnAbout {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  background: var(--primaryColor);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 1.5rem;
+}
+.about .sectionContent .textSection .btnAbout:hover {
+  background: var(--bgColor);
+  cursor: pointer;
+}
+.about .sectionContent .textSection .btnAbout a {
+  color: var(--pojectCardColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.about .sectionContent .textSection .btnAbout a:hover {
+  color: var(--textColor);
+}
+.about .headImgAbout {
+  position: relative;
+  max-height: 280px;
+  max-width: 350px;
+  margin: 2rem auto 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  border: 2px dashed var(--primaryColor);
+}
+.about .headImgAbout:hover {
+  cursor: pointer;
+  border: 2px solid var(--primaryColor);
+}
+.about .headImgAbout .imgAbout {
+  width: 215px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-self: center;
+  justify-self: center;
+}
+.about .headImgAbout::before {
+  content: "Hover Me";
+  font-size: 1.6rem;
+  color: var(--bgColor);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inconsolata", monospace, sans-serif;
+  background: var(--primaryColor);
+  justify-self: center;
+  align-self: center;
+  height: 97%;
+  width: 97%;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s;
+  mix-blend-mode: screen;
+}
+.about .headImgAbout:hover.headImgAbout::before {
+  height: 0%;
+}/*# sourceMappingURL=about.css.map */
