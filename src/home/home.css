@@ -19,6 +19,13 @@
   --borderRadius: 3rem;
 }
 
+.home {
+  padding: 5rem 0 19.7rem 0;
+}
+.home .leftIcons,
+.home .rightHome {
+  display: none;
+}
 .home .containerHome {
   padding: 4rem 1.5rem;
 }
@@ -100,5 +107,114 @@
   }
   100% {
     transform: translateY(5px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .home {
+    padding: 11.7rem 0;
+  }
+  .home .containerHome {
+    padding: 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .home .containerHome .introHome {
+    font-size: 1.5rem;
+  }
+  .home .containerHome .titleHome {
+    font-size: 3.5rem;
+  }
+  .home .containerHome .subTitleHome {
+    font-size: 2.1rem;
+  }
+  .home .containerHome .paragraphHome {
+    font-size: 1.5rem;
+  }
+  .home .containerHome .lowerSectionHome .btnHome {
+    padding: 0.8rem 1.5rem;
+  }
+  .home .containerHome .lowerSectionHome .btnHome a {
+    font-size: 2rem;
+  }
+  .home .containerHome .lowerSectionHome .scroolHome {
+    padding-top: 1.5rem;
+  }
+  .home .containerHome .lowerSectionHome .scroolHome .icon {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  .home .leftIcons,
+  .home .rightHome {
+    display: block;
+    position: fixed;
+  }
+  .home .leftIcons .icon,
+  .home .rightHome .icon {
+    color: var(--secondaryColor);
+  }
+  .home .leftIcons a,
+  .home .rightHome a {
+    font-weight: 600;
+  }
+  .home .leftIcons .lineHome,
+  .home .rightHome .lineHome {
+    margin: auto;
+    content: "";
+    background: var(--secondaryColor);
+    height: 100px;
+    width: 1px;
+  }
+  .home .leftIcons {
+    left: 5%;
+    bottom: 0;
+  }
+  .home .leftIcons .socials {
+    gap: 1rem;
+  }
+  .home .leftIcons .socials .icon {
+    color: var(--secondaryColor);
+  }
+  .home .leftIcons .socials .icon:hover {
+    color: var(--primaryColor);
+  }
+  .home .rightHome {
+    right: 0;
+    bottom: 0;
+  }
+  .home .rightHome .emailHome {
+    transform: rotate(90deg) translate(-90px);
+  }
+  .home .rightHome .emailHome a {
+    letter-spacing: 0.1rem;
+    color: var(--secondaryColor);
+  }
+  .home .rightHome .emailHome a:hover {
+    color: var(--primaryColor);
+  }
+  .home .containerHome {
+    padding: 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    gap: 0.5rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .home .containerHome {
+    padding: 6rem;
+  }
+  .home .containerHome .introHome {
+    font-size: 5rem;
+  }
+  .home .containerHome .subTitleHome {
+    line-height: 2.5rem;
+    font-size: 2.4rem;
+  }
+  .home .containerHome .paragraphHome {
+    font-size: 1.8rem;
   }
 }/*# sourceMappingURL=home.css.map */

@@ -22,6 +22,11 @@
 }
 
 .home {
+  padding: 5rem 0 19.7rem 0;
+  .leftIcons,
+  .rightHome {
+    display: none;
+  }
   .containerHome {
     padding: 4rem 1.5rem;
     .introHome {
@@ -104,6 +109,124 @@
             transform: translateY(5px);
           }
         }
+      }
+    }
+  }
+}
+
+// Media Query
+@media screen and (min-width: 480px) {
+  .home {
+    padding: 11.7rem 0;
+    .containerHome {
+      padding: 6rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .introHome {
+        font-size: 1.5rem;
+      }
+      .titleHome {
+        font-size: 3.5rem;
+      }
+      .subTitleHome {
+        font-size: 2.1rem;
+      }
+      .paragraphHome {
+        font-size: 1.5rem;
+      }
+
+      .lowerSectionHome {
+        .btnHome {
+          padding: 0.8rem 1.5rem;
+          a {
+            font-size: 2rem;
+          }
+        }
+        .scroolHome {
+          padding-top: 1.5rem;
+          .icon {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .home {
+    .leftIcons,
+    .rightHome {
+      display: block;
+      position: fixed;
+      .icon {
+        color: var(--secondaryColor);
+      }
+      a {
+        font-weight: 600;
+        // color: var(--secondaryColor);
+      }
+      .lineHome {
+        margin: auto;
+        content: "";
+        background: var(--secondaryColor);
+        height: 100px;
+        width: 1px;
+      }
+    }
+    .leftIcons {
+      left: 5%;
+      bottom: 0;
+      .socials {
+        gap: 1rem;
+        .icon {
+          color: var(--secondaryColor);
+          &:hover {
+            color: var(--primaryColor);
+          }
+        }
+      }
+    }
+    .rightHome {
+      right: 0;
+      bottom: 0;
+      .emailHome {
+        transform: rotate(90deg) translate(-90px);
+        a {
+          letter-spacing: 0.1rem;
+          color: var(--secondaryColor);
+          &:hover {
+            color: var(--primaryColor);
+          }
+        }
+      }
+    }
+
+    .containerHome {
+      padding: 6rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      margin: auto;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .home {
+    .containerHome {
+      padding: 6rem;
+      .introHome {
+        font-size: 5rem;
+      }
+      .subTitleHome {
+        line-height: 2.5rem;
+        font-size: 2.4rem;
+      }
+      .paragraphHome {
+        font-size: 1.8rem;
       }
     }
   }

@@ -1,15 +1,52 @@
+import React, { useRef } from "react";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { TbArrowBigRightLineFilled } from "react-icons/tb";
+import { FaGithubSquare, FaWhatsapp } from "react-icons/fa";
 import "./contact.css";
-import {
-  FaFacebookMessenger,
-  FaGithubSquare,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { PiGithubLogoBold } from "react-icons/pi";
+
+// Email js
+import emailjs from "emailjs-com";
+// Alert Sweet
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_fgq0q4o",
+      "template_3amwea7",
+      form.current,
+      "ApTYVx2AQP68ff3Zy"
+    );
+    e.target.reset();
+    alertSuccess();
+  };
+
+  const alertSuccess = () => {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+      customClass: {
+        // Tambahkan kelas CSS kustom yang Anda buat di sini
+        title: "swal-toast-title", // Nama kelas untuk judul alert
+      },
+    });
+
+    Toast.fire({
+      icon: "success",
+      title: "Your Send Message Successfully",
+    });
+  };
+
   return (
     <section id="contact" className="contact section container">
       <div className="sectionTitle">
@@ -101,12 +138,23 @@ const Contact = () => {
         </div>
 
         <div className="form grid">
-          <h3>Send me and email</h3>
+          <h3>Send me an email</h3>
 
-          <form action="" className="grid">
-            <input type="text" placeholder="Enter Your Name" />
-            <input type="text" placeholder="Enter Your Email" />
+          <form ref={form} onSubmit={sendEmail} className="grid">
+            <input
+              name="name"
+              type="text"
+              placeholder="Enter Your Name"
+              required
+            />
+            <input
+              name="email"
+              type="text"
+              placeholder="Enter Your Email"
+              required
+            />
             <textarea
+              required
               name="message"
               id=""
               cols="30"

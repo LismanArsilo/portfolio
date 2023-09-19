@@ -21,11 +21,17 @@
   --borderRadius: 3rem;
 }
 
+.swal-toast-title {
+  font-style: italic;
+  color: var(--bgColor);
+}
+
 .contact {
   .contactContainer {
     width: 100%;
     justify-content: center;
     align-items: flex-start;
+    gap: 2rem;
     .socialContacts {
       justify-content: center;
       h3 {
@@ -81,19 +87,56 @@
     }
 
     .form {
+      width: 100%;
+      padding: 0 0.9rem;
+      justify-content: center;
+      margin: auto;
       h3 {
-        padding: 1rem 0;
         text-align: center;
+        color: var(--secondaryColor);
       }
       form {
+        width: 100%;
+        text-align: center;
         gap: 1rem;
         input,
         textarea {
-          padding: 0.5rem;
+          height: 1rem;
+          width: 100%;
+          padding: 1.5rem 0.5rem;
+          background: none;
+          border: 2px solid var(--secondaryColor);
           border-radius: 10px;
-          border: none;
-          outline: none;
           font-size: 1rem;
+          margin: 0.5rem 0;
+          font-weight: 600;
+          color: var(--textColor);
+          outline: none;
+          &::placeholder {
+            color: var(--secondaryColor);
+            opacity: 0.5rem;
+          }
+        }
+        textarea {
+          height: 150px;
+        }
+        .formBtn {
+          display: block;
+          margin: auto;
+          width: inherit;
+          border: none;
+          padding: 1rem 0;
+          background: var(--primaryHover);
+          color: var(--textColor);
+          font-weight: 600;
+          cursor: pointer;
+          border-radius: 7px;
+          font-size: 1.1rem;
+          &:hover {
+            background: var(--primaryColor);
+            color: var(--bgColor);
+            scale: 1.05;
+          }
         }
       }
     }

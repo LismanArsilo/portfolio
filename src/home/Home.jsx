@@ -1,5 +1,5 @@
-// import { AiFillGithub, AiOutlineInstagram } from "react-icons/ai";
-// import { BsFacebook } from "react-icons/bs";
+import { AiFillGithub, AiOutlineInstagram } from "react-icons/ai";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { TbArrowBigRightLines, TbChevronsDown } from "react-icons/tb";
 import "./home.css";
 
@@ -7,19 +7,23 @@ const Home = () => {
   return (
     <section id="home" className="home section">
       {/* This div be only visible */}
-      {/* <div className="leftIcons">
+      <div className="leftIcons">
         <div className="socials grid">
-          <a href="" target="_blank">
+          <a href="https://github.com/LismanArsilo" target="_blank">
             <AiFillGithub className="icon" />
           </a>
-          <a href="" target="_blank">
+          <a href="https://www.instagram.com/lismanarsilo/" target="_blank">
             <AiOutlineInstagram className="icon" />
           </a>
-          <a href="" target="_blank">
-            <BsFacebook className="icon" />
+          <a
+            href="https://www.linkedin.com/in/lisman-arsilo-1104a6202/"
+            target="_blank"
+          >
+            <BsLinkedin className="icon" />
           </a>
+          <div className="lineHome"></div>
         </div>
-      </div> */}
+      </div>
 
       {/* Home Content */}
       <div className="container containerHome">
@@ -48,17 +52,15 @@ const Home = () => {
       </div>
 
       {/* Right Content */}
-      {/* <div className="rightHome">
-        <div>
-          <div className="emailHome">
-            <a href="https://mailto:lismanarsilo@gmail.com" target="_blank">
-              lismanarsilo@gmail.com
-            </a>
-          </div>
-
-          <div className="lineHome"></div>
+      <div className="rightHome">
+        <div className="emailHome">
+          <a href="https://mailto:lismanarsilo@gmail.com" target="_blank">
+            lismanarsilo@gmail.com
+          </a>
         </div>
-      </div> */}
+
+        <div className="lineHome"></div>
+      </div>
     </section>
   );
 };

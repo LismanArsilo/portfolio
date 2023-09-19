@@ -100,4 +100,54 @@
   .activeNavbar {
     top: 6rem;
   }
+}
+@media screen and (min-width: 769px) {
+  .navToggle,
+  .navClose {
+    display: none;
+  }
+  .colorNav {
+    color: var(--bgColor) !important;
+  }
+  .header {
+    padding: 2.5rem 2rem;
+  }
+  .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0 1rem;
+  }
+  .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--primaryHover);
+  }
+  .header .navBar .navLists .btn {
+    margin-left: 1rem;
+  }
+  .header .navBar .navLists .btn a {
+    color: var(--primaryColor);
+  }
+  .header .navBar .navLists .btn a:hover {
+    color: var(--bgColor);
+  }
+}
+@media screen and (min-width: 960px) {
+  .header {
+    padding: 2.5rem 5rem;
+  }
+  .header .navBar .navLists {
+    padding: 0 2rem;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0 2rem;
+  }
 }/*# sourceMappingURL=navbar.css.map */

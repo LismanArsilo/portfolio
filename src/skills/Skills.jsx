@@ -10,7 +10,7 @@ import "./skills.css";
 
 const Skills = () => {
   return (
-    <div id="skill" className="skills section container">
+    <div id="skills" className="skills section container">
       <div className="sectionTitle">
         <span className="titleNumber">02.</span>
         <h5 className="titleText">

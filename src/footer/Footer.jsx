@@ -1,8 +1,10 @@
+import "./footer.css";
+
 const Footer = () => {
   return (
-    <div>
-      <p>Footer</p>
-    </div>
+    <section className="footer">
+      <span>Developer by Lisman Arsilo 2023 | all right reserved.</span>
+    </section>
   );
 };
 

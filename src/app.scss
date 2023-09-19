@@ -199,3 +199,10 @@ body {
   background: var(--bgColor);
   color: var(--whiteColor);
 }
+
+@media screen and (min-width: 769px) {
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+}
