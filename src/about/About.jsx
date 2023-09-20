@@ -35,10 +35,10 @@ const About = () => {
             </a>
           </div>
         </div>
-      </div>
 
-      <div className="headImgAbout">
-        <img src={lisman} alt="Lisman Arsilo" className="imgAbout" />
+        <div className="headImgAbout">
+          <img src={lisman} alt="Lisman Arsilo" className="imgAbout" />
+        </div>
       </div>
     </section>
   );

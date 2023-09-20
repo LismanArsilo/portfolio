@@ -113,3 +113,24 @@
     }
   }
 }
+
+// Media Query
+@media screen and (min-width: 768px) {
+  .projects {
+    .projectContainer {
+      .generalProject {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects {
+    .projectContainer {
+      .generalProject {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

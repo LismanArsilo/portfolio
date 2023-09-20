@@ -140,4 +140,22 @@
   background: var(--primaryColor);
   color: var(--bgColor);
   scale: 1.05;
+}
+
+@media screen and (min-width: 580px) {
+  .contact .contactContainer .socialContacts .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    width: 70%;
+    margin: auto;
+  }
+  .contact .contactContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact .contactContainer .socialContacts .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=contact.css.map */

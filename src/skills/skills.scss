@@ -27,6 +27,8 @@
     gap: 2rem 0;
     padding: 1rem 0;
     .skillGroup {
+      display: flex;
+      flex-direction: column;
       .groupTitle {
         color: var(--textColor);
         .subTitle {
@@ -96,3 +98,40 @@
 }
 
 // Media Query
+@media screen and (min-width: 480px) {
+  .skills {
+    .skillsContainer {
+      .skillGroup {
+        .generalSkills {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .skills {
+    .skillsContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .skills {
+    width: 70%;
+    margin: auto;
+    .skillsContainer {
+      .skillGroup {
+        align-items: start;
+        gap: 1rem;
+        .generalSkills {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}

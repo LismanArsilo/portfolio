@@ -52,9 +52,9 @@
 }
 .about .headImgAbout {
   position: relative;
-  max-height: 280px;
-  max-width: 350px;
-  margin: 2rem auto 6rem;
+  max-height: 250px;
+  max-width: 250px;
+  margin: 2rem auto 3rem;
   border-radius: 50%;
   overflow: hidden;
   display: grid;
@@ -65,6 +65,7 @@
   border: 2px solid var(--primaryColor);
 }
 .about .headImgAbout .imgAbout {
+  height: 215px;
   width: 215px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -88,9 +89,27 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.3s;
   mix-blend-mode: screen;
+  transition: all 0.3s;
 }
 .about .headImgAbout:hover.headImgAbout::before {
   height: 0%;
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about .sectionContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about .sectionContent .headImgAbout {
+    height: 215px;
+    width: 220px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=about.css.map */

@@ -142,3 +142,30 @@
     }
   }
 }
+
+@media screen and (min-width: 580px) {
+  .contact {
+    .contactContainer {
+      .socialContacts {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact {
+    width: 70%;
+    margin: auto;
+    .contactContainer {
+      grid-template-columns: repeat(2, 1fr);
+      .socialContacts {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}

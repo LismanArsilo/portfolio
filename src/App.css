@@ -196,4 +196,19 @@ body {
     width: 70%;
     margin: auto;
   }
+}
+@media screen and (min-width: 960px) {
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+@media screen and (min-width: 1420px) {
+  body {
+    zoom: 1;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
 }/*# sourceMappingURL=app.css.map */
