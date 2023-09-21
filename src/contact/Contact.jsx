@@ -89,7 +89,7 @@ const Contact = () => {
               <span className="userName">@lismanarsilo</span>
               <div>
                 <a
-                  href="https://api.whatsapp.com/send?phone=085212357622&text=Hello%20Lisman,%20can%20I%20have some%20time%20to%20talk?"
+                  href="https://api.whatsapp.com/send?phone=+6285212357622&text=Hello%20Lisman,%20can%20I%20have%20some%20time%20to%20talk?"
                   className="flex"
                   target="_blank"
                 >
